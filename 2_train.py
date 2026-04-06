@@ -16,13 +16,13 @@ class MLP4(nn.Module):
     def __init__(self, input_dim=16):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(input_dim, 64),
-            nn.ReLU(),
-            nn.Dropout(0.2),
-            nn.Linear(64, 32),
-            nn.ReLU(),
-            nn.Dropout(0.2),
-            nn.Linear(32, 4)
+            nn.Linear(input_dim, 64), # 隐藏层1 64个神经元
+            nn.ReLU(), # 激活函数
+            nn.Dropout(0.2), # 随机失活20%神经元
+            nn.Linear(64, 32), # 隐藏层2 32个神经元
+            nn.ReLU(), # 激活函数
+            nn.Dropout(0.2), # 随机失活20%神经元 
+            nn.Linear(32, 4), # 输出层 4个神经元
         )
 
     def forward(self, x):

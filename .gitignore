@@ -11,3 +11,9 @@ wheels/
 
 # Claude files
 .claude/
+
+# output files
+picture/
+docs/
+data/gandou_test.csv
+data/gandou_train.csv
